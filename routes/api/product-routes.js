@@ -7,8 +7,8 @@ const sequelize = require('../../config/connection')
 router.get('/', async (req, res) => {
   try {
     const productData = await Product.findAll({
-      include: [{ model: Category}],
-        // include: [{ model: Tag,}]
+      include: [{ model: Category}, {model: Tag}],
+      // include: [{ model: Tag,}]
     }); res.status(300).json(productData)
 
   } catch (err){
@@ -42,14 +42,8 @@ router.get('/:id', async (req, res) => {
 });
 
 // create new product
-router.post('/', async (req, res) => {
+router.post('/', (req, res) => {
 
-  try {
-    const productData = await Category.create(req.body);
-    res.status(200).json(productData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
   /* req.body should look like this...
     {
       product_name: "Basketball",
@@ -78,6 +72,7 @@ router.post('/', async (req, res) => {
       console.log(err);
       res.status(400).json(err);
     });
+    
 });
 
 // update product
@@ -122,7 +117,22 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
+  try{
+    const productData = await Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+  
+    if (!productData) {
+      res.status(404.).json({ message: ' No Product found with this ID'});
+      return;
+    }
+    res.status(200).json(productData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
   // delete one product by its `id` value
 });
 
