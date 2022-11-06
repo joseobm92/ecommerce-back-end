@@ -14,14 +14,14 @@ Tag.init(
     },
     tag_name: {
       type:DataTypes.STRING,
- // define columns
+ 
     },
     product_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'product',
-        key: 'id'
-      }
+      // references: {
+      //   model: 'product',
+      //   key: 'id'
+      // }
     }
   },
   {
