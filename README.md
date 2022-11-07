@@ -17,7 +17,7 @@
   2. install node.js.
   3. Command line (npm install) to install neccesary modules located on package.json.
   4. Create your own environmental variables on a file called .env to connect with your database.
-  5. Use Dbeaver to create database using schema.sql and use Command Line ( npm run seed) to seed the database.
+  5. Use a database tool like Dbeaver to create database using schema.sql and use Command Line ( npm run seed) to seed the database.
   6. Command Line (node server.js) to get your pc to listen to port 3001.
   7. Use an API platform like postman to check on different routes and application functionality.
 
@@ -30,6 +30,10 @@
   ## Usage
 
   Must have [Node.js](https://nodejs.org/en/) downloaded!
+
+Must have [mySQL](https://dev.mysql.com/downloads/mysql/) downloaded! 
+
+Must have [DBeaver](https://dbeaver.io/) downloaded! 
 
   As a programmer:
 ```sh 
