@@ -59,7 +59,7 @@ Must have [DBeaver](https://dbeaver.io/) downloaded!
 
   ## Demo
 
- <!-- [Video Demo](https://drive.google.com/file/d/16X0KtWZOMRObih052DePAyg5SPJkJPqp/view?usp=sharing) -->
+ [Video Demo](https://drive.google.com/file/d/1mEEmJJmd8X02PWcu3Pvq285YQr5B2Zct/view?usp=share_link)
 
 
   ## License
